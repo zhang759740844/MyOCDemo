@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96111F18A3471651CA866EE0 /* libPods-AutoHeightTableViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88FCFFC5874DC16360ED5B9D /* libPods-AutoHeightTableViewDemo.a */; };
 		B6C5027F1D6D97EB0057B349 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C5027E1D6D97EB0057B349 /* main.m */; };
 		B6C502821D6D97EB0057B349 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C502811D6D97EB0057B349 /* AppDelegate.m */; };
 		B6C502851D6D97EB0057B349 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C502841D6D97EB0057B349 /* ViewController.m */; };
@@ -17,6 +18,9 @@
 		B6C502B41D6DA56A0057B349 /* TableViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C502B31D6DA56A0057B349 /* TableViewController1.m */; };
 		B6C502B81D6DAAD10057B349 /* TableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C502B61D6DAAD10057B349 /* TableViewCell1.m */; };
 		B6C502B91D6DAAD10057B349 /* TableViewCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C502B71D6DAAD10057B349 /* TableViewCell1.xib */; };
+		B6C502BE1D6EAD850057B349 /* TableViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C502BD1D6EAD850057B349 /* TableViewController2.m */; };
+		B6C502C21D6EAEAE0057B349 /* TableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C502C01D6EAEAE0057B349 /* TableViewCell2.m */; };
+		B6C502C31D6EAEAE0057B349 /* TableViewCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = B6C502C11D6EAEAE0057B349 /* TableViewCell2.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1FD85BCF87098C0E1E79A9E4 /* Pods-AutoHeightTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoHeightTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoHeightTableViewDemo/Pods-AutoHeightTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
+		88FCFFC5874DC16360ED5B9D /* libPods-AutoHeightTableViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoHeightTableViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C5027A1D6D97EA0057B349 /* AutoHeightTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoHeightTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C5027E1D6D97EB0057B349 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6C502801D6D97EB0057B349 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -57,6 +63,12 @@
 		B6C502B51D6DAAD10057B349 /* TableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell1.h; sourceTree = "<group>"; };
 		B6C502B61D6DAAD10057B349 /* TableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell1.m; sourceTree = "<group>"; };
 		B6C502B71D6DAAD10057B349 /* TableViewCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell1.xib; sourceTree = "<group>"; };
+		B6C502BC1D6EAD850057B349 /* TableViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController2.h; sourceTree = "<group>"; };
+		B6C502BD1D6EAD850057B349 /* TableViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController2.m; sourceTree = "<group>"; };
+		B6C502BF1D6EAEAE0057B349 /* TableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell2.h; sourceTree = "<group>"; };
+		B6C502C01D6EAEAE0057B349 /* TableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell2.m; sourceTree = "<group>"; };
+		B6C502C11D6EAEAE0057B349 /* TableViewCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell2.xib; sourceTree = "<group>"; };
+		BC4683BB98EE3C0303784E8C /* Pods-AutoHeightTableViewDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoHeightTableViewDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AutoHeightTableViewDemo/Pods-AutoHeightTableViewDemo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96111F18A3471651CA866EE0 /* libPods-AutoHeightTableViewDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +97,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FA8D1A55EC16FE3DFBFA0A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC4683BB98EE3C0303784E8C /* Pods-AutoHeightTableViewDemo.debug.xcconfig */,
+				1FD85BCF87098C0E1E79A9E4 /* Pods-AutoHeightTableViewDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		32AE027E5D122DBAE2D6CB6B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88FCFFC5874DC16360ED5B9D /* libPods-AutoHeightTableViewDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B6C502711D6D97EA0057B349 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +121,8 @@
 				B6C502961D6D97EB0057B349 /* AutoHeightTableViewTests */,
 				B6C502A11D6D97EB0057B349 /* AutoHeightTableViewUITests */,
 				B6C5027B1D6D97EA0057B349 /* Products */,
+				2FA8D1A55EC16FE3DFBFA0A2 /* Pods */,
+				32AE027E5D122DBAE2D6CB6B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,8 +144,7 @@
 				B6C502831D6D97EB0057B349 /* ViewController.h */,
 				B6C502841D6D97EB0057B349 /* ViewController.m */,
 				B6C502B01D6D99AF0057B349 /* ViewController.xib */,
-				B6C502B21D6DA56A0057B349 /* TableViewController1.h */,
-				B6C502B31D6DA56A0057B349 /* TableViewController1.m */,
+				B6C502BB1D6EAD610057B349 /* controller */,
 				B6C502BA1D6DB1060057B349 /* cell */,
 				B6C502891D6D97EB0057B349 /* Assets.xcassets */,
 				B6C5028E1D6D97EB0057B349 /* Info.plist */,
@@ -154,8 +185,22 @@
 				B6C502B51D6DAAD10057B349 /* TableViewCell1.h */,
 				B6C502B61D6DAAD10057B349 /* TableViewCell1.m */,
 				B6C502B71D6DAAD10057B349 /* TableViewCell1.xib */,
+				B6C502BF1D6EAEAE0057B349 /* TableViewCell2.h */,
+				B6C502C01D6EAEAE0057B349 /* TableViewCell2.m */,
+				B6C502C11D6EAEAE0057B349 /* TableViewCell2.xib */,
 			);
 			name = cell;
+			sourceTree = "<group>";
+		};
+		B6C502BB1D6EAD610057B349 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				B6C502B21D6DA56A0057B349 /* TableViewController1.h */,
+				B6C502B31D6DA56A0057B349 /* TableViewController1.m */,
+				B6C502BC1D6EAD850057B349 /* TableViewController2.h */,
+				B6C502BD1D6EAD850057B349 /* TableViewController2.m */,
+			);
+			name = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6C502A71D6D97EB0057B349 /* Build configuration list for PBXNativeTarget "AutoHeightTableViewDemo" */;
 			buildPhases = (
+				3CFC10BACF073042373473DC /* [CP] Check Pods Manifest.lock */,
 				B6C502761D6D97EA0057B349 /* Sources */,
 				B6C502771D6D97EA0057B349 /* Frameworks */,
 				B6C502781D6D97EA0057B349 /* Resources */,
+				8B140406EF1A0950A6F9F99E /* [CP] Embed Pods Frameworks */,
+				831C1CF440F16E578A58784A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -261,6 +309,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C502C31D6EAEAE0057B349 /* TableViewCell2.xib in Resources */,
 				B6C502B11D6D99AF0057B349 /* ViewController.xib in Resources */,
 				B6C5028A1D6D97EB0057B349 /* Assets.xcassets in Resources */,
 				B6C502B91D6DAAD10057B349 /* TableViewCell1.xib in Resources */,
@@ -283,15 +332,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CFC10BACF073042373473DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		831C1CF440F16E578A58784A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoHeightTableViewDemo/Pods-AutoHeightTableViewDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B140406EF1A0950A6F9F99E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AutoHeightTableViewDemo/Pods-AutoHeightTableViewDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B6C502761D6D97EA0057B349 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B6C502851D6D97EB0057B349 /* ViewController.m in Sources */,
+				B6C502C21D6EAEAE0057B349 /* TableViewCell2.m in Sources */,
 				B6C502B41D6DA56A0057B349 /* TableViewController1.m in Sources */,
 				B6C502B81D6DAAD10057B349 /* TableViewCell1.m in Sources */,
 				B6C502821D6D97EB0057B349 /* AppDelegate.m in Sources */,
+				B6C502BE1D6EAD850057B349 /* TableViewController2.m in Sources */,
 				B6C5027F1D6D97EB0057B349 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +511,7 @@
 		};
 		B6C502A81D6D97EB0057B349 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC4683BB98EE3C0303784E8C /* Pods-AutoHeightTableViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AutoHeightTableView/Info.plist;
@@ -423,6 +523,7 @@
 		};
 		B6C502A91D6D97EB0057B349 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1FD85BCF87098C0E1E79A9E4 /* Pods-AutoHeightTableViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AutoHeightTableView/Info.plist;

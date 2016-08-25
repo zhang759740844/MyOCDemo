@@ -21,8 +21,6 @@
     _data = [NSMutableArray arrayWithArray:@[@"1\n2\n3\n4\n5\n6\n7\n8",@"1\n2\n3\n4\n5\n6\n7",@"1\n2\n3\n4\n5\n6",@"1\n2\n3\n4\n5",@"1\n2\n3\n4",@"1\n2\n3",@"1\n2",@"1"]];
     [self.tableView registerNib:[UINib nibWithNibName:@"TableViewCell1" bundle:nil] forCellReuseIdentifier:tableViewCell1];
     _cell = [self.tableView dequeueReusableCellWithIdentifier:tableViewCell1];
-    CGSize size = [_cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    NSLog(@"h=%f", size.height);
 }
 
 
@@ -46,7 +44,6 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     _cell.label.text = [_data objectAtIndex:indexPath.row];
     CGSize textHeight = [_cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-    NSLog(@"h=%f", textHeight.height + 1);
     CGFloat height = textHeight.height+1>90?textHeight.height+1:90;
     return height;
 }

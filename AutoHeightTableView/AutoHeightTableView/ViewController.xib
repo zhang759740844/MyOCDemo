@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
             <connections>
                 <outlet property="first" destination="HjQ-3N-xba" id="sPp-2k-PPf"/>
+                <outlet property="second" destination="kJv-ZO-ZBb" id="8Qr-PT-Cvm"/>
                 <outlet property="view" destination="gaf-rs-O4c" id="zb8-qp-nJ5"/>
             </connections>
         </placeholder>
@@ -16,16 +17,33 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjQ-3N-xba">
-                    <rect key="frame" x="137" y="93" width="46" height="30"/>
-                    <state key="normal" title="First"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HjQ-3N-xba">
+                    <rect key="frame" x="124" y="61" width="72" height="30"/>
+                    <state key="normal" title="First Label"/>
                     <connections>
                         <action selector="firstTableView:" destination="-1" eventType="touchUpInside" id="5dS-B1-BH8"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJv-ZO-ZBb">
+                    <rect key="frame" x="93" y="124" width="134" height="30"/>
+                    <state key="normal" title="Second TextView"/>
+                    <connections>
+                        <action selector="secondTableView:" destination="-1" eventType="touchUpInside" id="uXQ-hR-vYK"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="350" y="342"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HjQ-3N-xba" secondAttribute="trailing" constant="124" id="9tp-1r-Bxf"/>
+                <constraint firstItem="kJv-ZO-ZBb" firstAttribute="top" secondItem="HjQ-3N-xba" secondAttribute="bottom" constant="33" id="Cdh-2z-IAR"/>
+                <constraint firstItem="HjQ-3N-xba" firstAttribute="top" secondItem="gaf-rs-O4c" secondAttribute="top" constant="61" id="aR4-eE-QxI"/>
+                <constraint firstAttribute="bottom" secondItem="HjQ-3N-xba" secondAttribute="bottom" constant="477" id="hlf-4U-HgF"/>
+                <constraint firstItem="kJv-ZO-ZBb" firstAttribute="leading" secondItem="gaf-rs-O4c" secondAttribute="leading" constant="93" id="pyp-H0-BU4"/>
+                <constraint firstAttribute="trailing" secondItem="kJv-ZO-ZBb" secondAttribute="trailing" constant="93" id="qvY-KC-gAv"/>
+                <constraint firstAttribute="bottom" secondItem="kJv-ZO-ZBb" secondAttribute="bottom" constant="414" id="wgf-Qv-QCW"/>
+                <constraint firstItem="HjQ-3N-xba" firstAttribute="leading" secondItem="gaf-rs-O4c" secondAttribute="leading" constant="124" id="wgr-H2-IS7"/>
+            </constraints>
+            <point key="canvasLocation" x="341" y="337"/>
         </view>
     </objects>
 </document>

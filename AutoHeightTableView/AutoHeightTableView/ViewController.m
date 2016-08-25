@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 #import "TableViewController1.h"
+#import "TableViewController2.h"
 @interface ViewController ()
 @property (nonatomic,weak) IBOutlet UIButton *first;
 
+@property (nonatomic,weak) IBOutlet UIButton *second;
 @end
 
 @implementation ViewController
@@ -23,6 +25,11 @@
 - (IBAction)firstTableView:(id)sender{
     TableViewController1 *vc1 = [[TableViewController1 alloc]init];
     [self.navigationController pushViewController:vc1 animated:YES];
+}
+
+- (IBAction)secondTableView:(id)sender{
+    TableViewController2 *vc2 = [[TableViewController2 alloc]init];
+    [self.navigationController pushViewController:vc2 animated:YES];
 }
 
 @end
