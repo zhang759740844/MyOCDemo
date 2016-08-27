@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="first" destination="HjQ-3N-xba" id="sPp-2k-PPf"/>
                 <outlet property="second" destination="kJv-ZO-ZBb" id="8Qr-PT-Cvm"/>
+                <outlet property="third" destination="hVf-y2-Edp" id="RPN-Iz-PHp"/>
                 <outlet property="view" destination="gaf-rs-O4c" id="zb8-qp-nJ5"/>
             </connections>
         </placeholder>
@@ -31,19 +32,30 @@
                         <action selector="secondTableView:" destination="-1" eventType="touchUpInside" id="uXQ-hR-vYK"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hVf-y2-Edp">
+                    <rect key="frame" x="72" y="184" width="177" height="30"/>
+                    <state key="normal" title="Third FDTemplateLayout"/>
+                    <connections>
+                        <action selector="thirdTableView:" destination="-1" eventType="touchUpInside" id="Qsp-GI-4vi"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="hVf-y2-Edp" firstAttribute="leading" secondItem="gaf-rs-O4c" secondAttribute="leading" constant="72" id="0IQ-oN-QQb"/>
                 <constraint firstAttribute="trailing" secondItem="HjQ-3N-xba" secondAttribute="trailing" constant="124" id="9tp-1r-Bxf"/>
                 <constraint firstItem="kJv-ZO-ZBb" firstAttribute="top" secondItem="HjQ-3N-xba" secondAttribute="bottom" constant="33" id="Cdh-2z-IAR"/>
+                <constraint firstItem="hVf-y2-Edp" firstAttribute="top" secondItem="kJv-ZO-ZBb" secondAttribute="bottom" constant="30" id="Q6l-KJ-ArN"/>
                 <constraint firstItem="HjQ-3N-xba" firstAttribute="top" secondItem="gaf-rs-O4c" secondAttribute="top" constant="61" id="aR4-eE-QxI"/>
                 <constraint firstAttribute="bottom" secondItem="HjQ-3N-xba" secondAttribute="bottom" constant="477" id="hlf-4U-HgF"/>
+                <constraint firstAttribute="bottom" secondItem="hVf-y2-Edp" secondAttribute="bottom" constant="354" id="mcj-ON-szX"/>
                 <constraint firstItem="kJv-ZO-ZBb" firstAttribute="leading" secondItem="gaf-rs-O4c" secondAttribute="leading" constant="93" id="pyp-H0-BU4"/>
                 <constraint firstAttribute="trailing" secondItem="kJv-ZO-ZBb" secondAttribute="trailing" constant="93" id="qvY-KC-gAv"/>
+                <constraint firstAttribute="trailing" secondItem="hVf-y2-Edp" secondAttribute="trailing" constant="71" id="uGH-ET-HMf"/>
                 <constraint firstAttribute="bottom" secondItem="kJv-ZO-ZBb" secondAttribute="bottom" constant="414" id="wgf-Qv-QCW"/>
                 <constraint firstItem="HjQ-3N-xba" firstAttribute="leading" secondItem="gaf-rs-O4c" secondAttribute="leading" constant="124" id="wgr-H2-IS7"/>
             </constraints>
-            <point key="canvasLocation" x="341" y="337"/>
+            <point key="canvasLocation" x="427" y="333"/>
         </view>
     </objects>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		96111F18A3471651CA866EE0 /* libPods-AutoHeightTableViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88FCFFC5874DC16360ED5B9D /* libPods-AutoHeightTableViewDemo.a */; };
+		B61BA8571D71E67D006BF784 /* TableViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = B61BA8561D71E67D006BF784 /* TableViewController3.m */; };
 		B6C5027F1D6D97EB0057B349 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C5027E1D6D97EB0057B349 /* main.m */; };
 		B6C502821D6D97EB0057B349 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C502811D6D97EB0057B349 /* AppDelegate.m */; };
 		B6C502851D6D97EB0057B349 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C502841D6D97EB0057B349 /* ViewController.m */; };
@@ -43,6 +44,8 @@
 /* Begin PBXFileReference section */
 		1FD85BCF87098C0E1E79A9E4 /* Pods-AutoHeightTableViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AutoHeightTableViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AutoHeightTableViewDemo/Pods-AutoHeightTableViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		88FCFFC5874DC16360ED5B9D /* libPods-AutoHeightTableViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AutoHeightTableViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B61BA8551D71E67D006BF784 /* TableViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController3.h; sourceTree = "<group>"; };
+		B61BA8561D71E67D006BF784 /* TableViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController3.m; sourceTree = "<group>"; };
 		B6C5027A1D6D97EA0057B349 /* AutoHeightTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoHeightTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C5027E1D6D97EB0057B349 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6C502801D6D97EB0057B349 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -199,6 +202,8 @@
 				B6C502B31D6DA56A0057B349 /* TableViewController1.m */,
 				B6C502BC1D6EAD850057B349 /* TableViewController2.h */,
 				B6C502BD1D6EAD850057B349 /* TableViewController2.m */,
+				B61BA8551D71E67D006BF784 /* TableViewController3.h */,
+				B61BA8561D71E67D006BF784 /* TableViewController3.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 				TargetAttributes = {
 					B6C502791D6D97EA0057B349 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = XX9M4Q6PP9;
 					};
 					B6C502921D6D97EB0057B349 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -388,6 +394,7 @@
 				B6C502851D6D97EB0057B349 /* ViewController.m in Sources */,
 				B6C502C21D6EAEAE0057B349 /* TableViewCell2.m in Sources */,
 				B6C502B41D6DA56A0057B349 /* TableViewController1.m in Sources */,
+				B61BA8571D71E67D006BF784 /* TableViewController3.m in Sources */,
 				B6C502B81D6DAAD10057B349 /* TableViewCell1.m in Sources */,
 				B6C502821D6D97EB0057B349 /* AppDelegate.m in Sources */,
 				B6C502BE1D6EAD850057B349 /* TableViewController2.m in Sources */,
@@ -464,7 +471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -502,7 +509,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -514,10 +521,13 @@
 			baseConfigurationReference = BC4683BB98EE3C0303784E8C /* Pods-AutoHeightTableViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AutoHeightTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zachary.AutoHeightTableView;
 				PRODUCT_NAME = AutoHeightTableViewDemo;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -526,10 +536,13 @@
 			baseConfigurationReference = 1FD85BCF87098C0E1E79A9E4 /* Pods-AutoHeightTableViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = AutoHeightTableView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zachary.AutoHeightTableView;
 				PRODUCT_NAME = AutoHeightTableViewDemo;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
