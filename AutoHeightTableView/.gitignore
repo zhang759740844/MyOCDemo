@@ -1,0 +1,11 @@
+/Pods
+*.xcuserstate
+project.xcworkspace
+xcuserdata
+UserInterfaceState.xcuserstate
+xcuserdata/
+UserInterface.xcuserstate
+*~
+build/
+*.txt
+*.pdf
