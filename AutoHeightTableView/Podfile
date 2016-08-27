@@ -1,3 +1,4 @@
 target ‘AutoHeightTableViewDemo’ do
 pod ‘Masonry’
+pod ‘UITableView+FDTemplateLayoutCell’
 end

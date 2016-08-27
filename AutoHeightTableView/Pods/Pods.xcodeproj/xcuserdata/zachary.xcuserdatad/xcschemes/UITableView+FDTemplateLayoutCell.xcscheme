@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1AF29A2BD4911F8261C747EAFB0F6E8C'
-               BlueprintName = 'Pods-AutoHeightTableViewDemo'
+               BlueprintIdentifier = 'EA6958126D21396297AC000485B8558B'
+               BlueprintName = 'UITableView+FDTemplateLayoutCell'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-AutoHeightTableViewDemo.a'>
+               BuildableName = 'libUITableView+FDTemplateLayoutCell.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
