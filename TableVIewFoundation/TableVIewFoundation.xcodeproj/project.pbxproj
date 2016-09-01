@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B64908561D759FBA0095ADED /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64908551D759FBA0095ADED /* HeaderView.xib */; };
 		B6B1445A1D7293FC00E3E256 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B144591D7293FC00E3E256 /* main.m */; };
 		B6B1445D1D7293FC00E3E256 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6B1445C1D7293FC00E3E256 /* AppDelegate.m */; };
 		B6B144651D7293FD00E3E256 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6B144641D7293FD00E3E256 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B64908551D759FBA0095ADED /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HeaderView.xib; path = ../HeaderView.xib; sourceTree = "<group>"; };
 		B6B144551D7293FC00E3E256 /* TableVIewFoundation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableVIewFoundation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6B144591D7293FC00E3E256 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6B1445B1D7293FC00E3E256 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		B6B144911D72C84100E3E256 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				B64908551D759FBA0095ADED /* HeaderView.xib */,
 				B6B144921D72C84F00E3E256 /* TableViewCell1.h */,
 				B6B144931D72C84F00E3E256 /* TableViewCell1.m */,
 				B6B144941D72C84F00E3E256 /* TableViewCell1.xib */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6B144651D7293FD00E3E256 /* Assets.xcassets in Resources */,
+				B64908561D759FBA0095ADED /* HeaderView.xib in Resources */,
 				B6B144961D72C84F00E3E256 /* TableViewCell1.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,11 +422,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TableVIewFoundation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zachary.AutoHeightTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -430,11 +437,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TableVIewFoundation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zachary.AutoHeightTableView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
