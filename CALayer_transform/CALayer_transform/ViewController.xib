@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="button" destination="JAK-NZ-KMz" id="tnU-rc-VZc"/>
+                <outlet property="button2" destination="kV4-SD-f4q" id="QV1-gC-Aa3"/>
+                <outlet property="leftArm" destination="9k3-5X-emu" id="WuG-h4-xbX"/>
+                <outlet property="leftHand" destination="ANc-im-rIG" id="Ql9-Mg-6ve"/>
+                <outlet property="view" destination="mou-Sg-h4K" id="XNv-aO-elV"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="mou-Sg-h4K">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9k3-5X-emu">
+                    <rect key="frame" x="35" y="229" width="93" height="42"/>
+                    <color key="backgroundColor" red="1" green="0.2470588235" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ANc-im-rIG">
+                    <rect key="frame" x="178" y="323" width="93" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAK-NZ-KMz">
+                    <rect key="frame" x="58" y="509" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kV4-SD-f4q">
+                    <rect key="frame" x="170" y="509" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="JAK-NZ-KMz" firstAttribute="top" secondItem="9k3-5X-emu" secondAttribute="bottom" constant="238" id="1DG-9z-kq4"/>
+                <constraint firstAttribute="bottom" secondItem="ANc-im-rIG" secondAttribute="bottom" constant="205" id="6xw-oj-FUK"/>
+                <constraint firstAttribute="bottom" secondItem="JAK-NZ-KMz" secondAttribute="bottom" constant="29" id="C9T-eN-QPi"/>
+                <constraint firstItem="ANc-im-rIG" firstAttribute="top" secondItem="mou-Sg-h4K" secondAttribute="top" constant="323" id="JUp-M7-koa"/>
+                <constraint firstItem="9k3-5X-emu" firstAttribute="leading" secondItem="mou-Sg-h4K" secondAttribute="leading" constant="35" id="LFv-jU-mLT"/>
+                <constraint firstItem="JAK-NZ-KMz" firstAttribute="leading" secondItem="mou-Sg-h4K" secondAttribute="leading" constant="58" id="TlO-2r-f3s"/>
+                <constraint firstItem="JAK-NZ-KMz" firstAttribute="top" secondItem="9k3-5X-emu" secondAttribute="bottom" constant="238" id="Xkd-GX-A7n"/>
+                <constraint firstAttribute="trailing" secondItem="9k3-5X-emu" secondAttribute="trailing" constant="192" id="eIE-t8-W2q"/>
+                <constraint firstItem="ANc-im-rIG" firstAttribute="leading" secondItem="mou-Sg-h4K" secondAttribute="leading" constant="178" id="frR-Jg-js6"/>
+                <constraint firstItem="9k3-5X-emu" firstAttribute="top" secondItem="mou-Sg-h4K" secondAttribute="top" constant="229" id="gH4-Wk-6WU"/>
+                <constraint firstAttribute="trailing" secondItem="ANc-im-rIG" secondAttribute="trailing" constant="49" id="gIz-Tz-qKf"/>
+                <constraint firstAttribute="trailing" secondItem="JAK-NZ-KMz" secondAttribute="trailing" constant="216" id="myQ-aG-qSr"/>
+            </constraints>
+            <point key="canvasLocation" x="411" y="405"/>
+        </view>
+    </objects>
+</document>
