@@ -40,6 +40,10 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oq-tD-6jk">
                     <rect key="frame" x="44" y="34" width="74" height="73"/>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zes-sZ-kmF">
+                    <rect key="frame" x="250" y="491" width="46" height="30"/>
+                    <state key="normal" title="next"/>
+                </button>
                 <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2bB-K9-Z0i">
                     <rect key="frame" x="189" y="44" width="71" height="63"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,7 +55,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="zes-sZ-kmF" secondAttribute="bottom" constant="47" id="01t-fv-wrB"/>
                 <constraint firstItem="JAK-NZ-KMz" firstAttribute="top" secondItem="9k3-5X-emu" secondAttribute="bottom" constant="238" id="1DG-9z-kq4"/>
+                <constraint firstItem="zes-sZ-kmF" firstAttribute="leading" secondItem="mou-Sg-h4K" secondAttribute="leading" constant="250" id="1pq-9w-PJ9"/>
+                <constraint firstItem="zes-sZ-kmF" firstAttribute="top" secondItem="mou-Sg-h4K" secondAttribute="top" constant="491" id="6cG-Dj-8aB"/>
                 <constraint firstAttribute="bottom" secondItem="ANc-im-rIG" secondAttribute="bottom" constant="205" id="6xw-oj-FUK"/>
                 <constraint firstAttribute="bottom" secondItem="JAK-NZ-KMz" secondAttribute="bottom" constant="29" id="C9T-eN-QPi"/>
                 <constraint firstItem="ANc-im-rIG" firstAttribute="top" secondItem="mou-Sg-h4K" secondAttribute="top" constant="323" id="JUp-M7-koa"/>
@@ -64,6 +71,7 @@
                 <constraint firstItem="ANc-im-rIG" firstAttribute="leading" secondItem="mou-Sg-h4K" secondAttribute="leading" constant="178" id="frR-Jg-js6"/>
                 <constraint firstItem="9k3-5X-emu" firstAttribute="top" secondItem="mou-Sg-h4K" secondAttribute="top" constant="229" id="gH4-Wk-6WU"/>
                 <constraint firstAttribute="trailing" secondItem="ANc-im-rIG" secondAttribute="trailing" constant="49" id="gIz-Tz-qKf"/>
+                <constraint firstAttribute="trailing" secondItem="zes-sZ-kmF" secondAttribute="trailing" constant="24" id="gY7-hE-yGX"/>
                 <constraint firstAttribute="trailing" secondItem="JAK-NZ-KMz" secondAttribute="trailing" constant="216" id="myQ-aG-qSr"/>
             </constraints>
             <point key="canvasLocation" x="411" y="405"/>
