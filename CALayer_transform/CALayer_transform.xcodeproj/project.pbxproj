@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B64ABDEA1D7EA4FB00C3956C /* NewLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B64ABDE91D7EA4FB00C3956C /* NewLayer.m */; };
 		B6C41CF81D792ED4001188A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C41CF71D792ED4001188A9 /* main.m */; };
 		B6C41CFB1D792ED4001188A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C41CFA1D792ED4001188A9 /* AppDelegate.m */; };
 		B6C41CFE1D792ED4001188A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C41CFD1D792ED4001188A9 /* ViewController.m */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B64ABDE81D7EA4FB00C3956C /* NewLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewLayer.h; sourceTree = "<group>"; };
+		B64ABDE91D7EA4FB00C3956C /* NewLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewLayer.m; sourceTree = "<group>"; };
 		B6C41CF31D792ED4001188A9 /* CALayer_transform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CALayer_transform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C41CF71D792ED4001188A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6C41CF91D792ED4001188A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,11 +102,11 @@
 		B6C41CF51D792ED4001188A9 /* CALayer_transform */ = {
 			isa = PBXGroup;
 			children = (
-				B6C41CF91D792ED4001188A9 /* AppDelegate.h */,
-				B6C41CFA1D792ED4001188A9 /* AppDelegate.m */,
 				B6C41CFC1D792ED4001188A9 /* ViewController.h */,
 				B6C41CFD1D792ED4001188A9 /* ViewController.m */,
 				B6C41D291D7930D7001188A9 /* ViewController.xib */,
+				B64ABDE81D7EA4FB00C3956C /* NewLayer.h */,
+				B64ABDE91D7EA4FB00C3956C /* NewLayer.m */,
 				B6C41D021D792ED4001188A9 /* Assets.xcassets */,
 				B6C41D071D792ED4001188A9 /* Info.plist */,
 				B6C41CF61D792ED4001188A9 /* Supporting Files */,
@@ -114,6 +117,8 @@
 		B6C41CF61D792ED4001188A9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B6C41CF91D792ED4001188A9 /* AppDelegate.h */,
+				B6C41CFA1D792ED4001188A9 /* AppDelegate.m */,
 				B6C41CF71D792ED4001188A9 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -267,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B64ABDEA1D7EA4FB00C3956C /* NewLayer.m in Sources */,
 				B6C41CFE1D792ED4001188A9 /* ViewController.m in Sources */,
 				B6C41CFB1D792ED4001188A9 /* AppDelegate.m in Sources */,
 				B6C41CF81D792ED4001188A9 /* main.m in Sources */,
@@ -482,6 +488,7 @@
 				B6C41D221D792ED4001188A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6C41D231D792ED4001188A9 /* Build configuration list for PBXNativeTarget "CALayer_transformTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +497,7 @@
 				B6C41D251D792ED4001188A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B6C41D261D792ED4001188A9 /* Build configuration list for PBXNativeTarget "CALayer_transformUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +506,7 @@
 				B6C41D281D792ED4001188A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

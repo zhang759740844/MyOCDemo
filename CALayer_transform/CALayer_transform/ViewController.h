@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NewLayer.h"
 @interface ViewController : UIViewController
 
 

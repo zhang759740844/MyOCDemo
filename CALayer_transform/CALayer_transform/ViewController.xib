@@ -9,6 +9,8 @@
             <connections>
                 <outlet property="button" destination="JAK-NZ-KMz" id="tnU-rc-VZc"/>
                 <outlet property="button2" destination="kV4-SD-f4q" id="QV1-gC-Aa3"/>
+                <outlet property="customView" destination="2bB-K9-Z0i" id="tCR-DF-r1d"/>
+                <outlet property="iconView" destination="5oq-tD-6jk" id="SrQ-HZ-QaQ"/>
                 <outlet property="leftArm" destination="9k3-5X-emu" id="WuG-h4-xbX"/>
                 <outlet property="leftHand" destination="ANc-im-rIG" id="Ql9-Mg-6ve"/>
                 <outlet property="view" destination="mou-Sg-h4K" id="XNv-aO-elV"/>
@@ -35,6 +37,17 @@
                     <rect key="frame" x="170" y="509" width="46" height="30"/>
                     <state key="normal" title="Button"/>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5oq-tD-6jk">
+                    <rect key="frame" x="44" y="34" width="74" height="73"/>
+                </imageView>
+                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2bB-K9-Z0i">
+                    <rect key="frame" x="189" y="44" width="71" height="63"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="sP2-cf-OKM"/>
+                        <constraint firstAttribute="width" constant="80" id="xM1-eT-uCl"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -43,8 +56,10 @@
                 <constraint firstAttribute="bottom" secondItem="JAK-NZ-KMz" secondAttribute="bottom" constant="29" id="C9T-eN-QPi"/>
                 <constraint firstItem="ANc-im-rIG" firstAttribute="top" secondItem="mou-Sg-h4K" secondAttribute="top" constant="323" id="JUp-M7-koa"/>
                 <constraint firstItem="9k3-5X-emu" firstAttribute="leading" secondItem="mou-Sg-h4K" secondAttribute="leading" constant="35" id="LFv-jU-mLT"/>
+                <constraint firstItem="2bB-K9-Z0i" firstAttribute="top" secondItem="mou-Sg-h4K" secondAttribute="top" constant="44" id="PZe-FH-fza"/>
                 <constraint firstItem="JAK-NZ-KMz" firstAttribute="leading" secondItem="mou-Sg-h4K" secondAttribute="leading" constant="58" id="TlO-2r-f3s"/>
                 <constraint firstItem="JAK-NZ-KMz" firstAttribute="top" secondItem="9k3-5X-emu" secondAttribute="bottom" constant="238" id="Xkd-GX-A7n"/>
+                <constraint firstAttribute="trailing" secondItem="2bB-K9-Z0i" secondAttribute="trailing" constant="60" id="bQ4-Ah-qnX"/>
                 <constraint firstAttribute="trailing" secondItem="9k3-5X-emu" secondAttribute="trailing" constant="192" id="eIE-t8-W2q"/>
                 <constraint firstItem="ANc-im-rIG" firstAttribute="leading" secondItem="mou-Sg-h4K" secondAttribute="leading" constant="178" id="frR-Jg-js6"/>
                 <constraint firstItem="9k3-5X-emu" firstAttribute="top" secondItem="mou-Sg-h4K" secondAttribute="top" constant="229" id="gH4-Wk-6WU"/>

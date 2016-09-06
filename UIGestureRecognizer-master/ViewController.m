@@ -20,25 +20,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
-    
-    
-    _mView = [[NewView alloc]initWithFrame:CGRectMake(0,0,250,250)];
-    _mView.userInteractionEnabled = YES;//交互使能，允许界面交互，不设置就不能动
-    _mView.backgroundColor = [UIColor redColor];
-    [self.view addSubview:_mView];
-    
-    _imageView2 = [[NewImageView2 alloc]initWithFrame:CGRectMake(0, 0, 150, 150)];
-    _imageView2.userInteractionEnabled = YES;//交互使能，允许界面交互，不设置就不能动
-    _imageView2.image = [UIImage imageNamed:@"cat"];
-    [self.mView addSubview:_imageView2];
-    
-    _imageView = [[NewImageView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-150)/2, (self.view.frame.size.height-150)/2, 150, 150)];
-    _imageView.userInteractionEnabled = YES;//交互使能，允许界面交互，不设置就不能动
-    _imageView.image = [UIImage imageNamed:@"cat"];
-    [self.view addSubview:_imageView];
+    [self addTouch];
+    [self addGesture];
     
 
     
+
+    
+    
+}
+
+# pragma mark - 手势
+- (void)addGesture{
     // 单击的 TapRecognizer
     UITapGestureRecognizer *singleTap;
     singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(SingleTap:)];
@@ -81,16 +74,16 @@
     [self.view addGestureRecognizer:swipeRecognizer];//是self的时候，操作整个view都可以捏合_imageView（在响应事件中操作）
     swipeRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;//操作为左滑
     swipeRecognizer.delegate = self;
-
+    
     
     //拖动手势 PanRecognizer
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc]
                                              initWithTarget:self
                                              action:@selector(handlePan:)];
-//    [_imageView addGestureRecognizer:panRecognizer];//关键语句，添加一个手势监测；
+    //    [_imageView addGestureRecognizer:panRecognizer];//关键语句，添加一个手势监测；
     panRecognizer.cancelsTouchesInView = YES;
     panRecognizer.maximumNumberOfTouches = 1;
-//    panRecognizer.delegate = self;
+    //    panRecognizer.delegate = self;
     
     //长按手势 LongPressRecognizer
     UILongPressGestureRecognizer *longPressRecognizer = [[UILongPressGestureRecognizer alloc]
@@ -99,24 +92,20 @@
     [_imageView addGestureRecognizer:longPressRecognizer];
     longPressRecognizer.minimumPressDuration = 1.0f;//触发长按事件时间为：1.0秒
     longPressRecognizer.delegate = self;
-    
+
 }
 
-# pragma 手势
--(void)SingleTap:(UITapGestureRecognizer*)recognizer
-{
+-(void)SingleTap:(UITapGestureRecognizer*)recognizer{
     //处理单击操作
     NSLog(@"单击操作");
 }
 
--(void)DoubleTap:(UITapGestureRecognizer*)recognizer
-{
+-(void)DoubleTap:(UITapGestureRecognizer*)recognizer{
     //处理双击操作
     NSLog(@"双击操作");
 }
 
-- (void)handlePinch:(UIPinchGestureRecognizer*)recognizer
-{
+- (void)handlePinch:(UIPinchGestureRecognizer*)recognizer{
     NSLog(@"缩放操作");//处理缩放操作
     //对imageview缩放
     _imageView.transform = CGAffineTransformScale(_imageView.transform, recognizer.scale, recognizer.scale);
@@ -125,8 +114,7 @@
     recognizer.scale = 1;
 }
 
-- (void)handleRotate:(UIRotationGestureRecognizer*) recognizer
-{
+- (void)handleRotate:(UIRotationGestureRecognizer*) recognizer{
     NSLog(@"旋转操作");//处理旋转操作
     //对imageview旋转
     _imageView.transform = CGAffineTransformRotate(_imageView.transform, recognizer.rotation);
@@ -136,8 +124,7 @@
     recognizer.rotation = 0;    //一定要清零
 }
 
-- (void)handleSwipe:(UISwipeGestureRecognizer*) recognizer
-{
+- (void)handleSwipe:(UISwipeGestureRecognizer*) recognizer{
     //处理滑动操作
     if(recognizer.direction==UISwipeGestureRecognizerDirectionLeft) {
         NSLog(@"左滑滑动操作");
@@ -146,8 +133,7 @@
     }
 }
 
--(void)handlePan:(UIPanGestureRecognizer*)recognizer
-{
+-(void)handlePan:(UIPanGestureRecognizer*)recognizer{
     NSLog(@"拖动操作");
     //处理拖动操作,拖动是基于imageview，如果经过旋转，拖动方向也是相对imageview上下左右移动，而不是屏幕对上下左右
     CGPoint translation = [recognizer translationInView:_imageView];
@@ -156,8 +142,7 @@
     [recognizer setTranslation:CGPointZero inView:_imageView];
 }
 
--(void)handlelongPress:(UILongPressGestureRecognizer*)recognizer
-{
+-(void)handlelongPress:(UILongPressGestureRecognizer*)recognizer{
     //处理长按操作,开始结束都会调用，所以长按1次会执行2次
     if(recognizer.state == UIGestureRecognizerStateBegan){
         NSLog(@"开始长按操作");
@@ -166,7 +151,25 @@
     }
 }
 
-# pragma 触摸
+# pragma mark - 触摸
+- (void)addTouch{
+    _mView = [[NewView alloc]initWithFrame:CGRectMake(0,0,250,250)];
+    _mView.userInteractionEnabled = YES;//交互使能，允许界面交互，不设置就不能动
+    _mView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:_mView];
+    
+    _imageView2 = [[NewImageView2 alloc]initWithFrame:CGRectMake(0, 0, 150, 150)];
+    _imageView2.userInteractionEnabled = YES;//交互使能，允许界面交互，不设置就不能动
+    _imageView2.image = [UIImage imageNamed:@"cat"];
+    _imageView2.layer.anchorPoint = CGPointMake(0,0);
+    [self.mView addSubview:_imageView2];
+    
+    _imageView = [[NewImageView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-150)/2, (self.view.frame.size.height-150)/2, 150, 150)];
+    _imageView.userInteractionEnabled = YES;//交互使能，允许界面交互，不设置就不能动
+    _imageView.image = [UIImage imageNamed:@"cat"];
+    [self.view addSubview:_imageView];
+}
+
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     NSLog(@"touch began...");
 }
