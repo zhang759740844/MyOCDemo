@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewImageView.h"
+#import "NewImageView2.h"
+#import "NewView.h"
+@interface ViewController : UIViewController<UIGestureRecognizerDelegate>
 
-@interface ViewController : UIViewController<UIGestureRecognizerDelegate>{
-    UIImageView *_imageView;
-}
+
 
 @end

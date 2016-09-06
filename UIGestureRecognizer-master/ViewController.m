@@ -9,7 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
-
+@property(nonatomic,strong) NewImageView *imageView;
+@property(nonatomic,strong) NewImageView2 *imageView2;
+@property(nonatomic,strong) NewView *mView;
 @end
 
 @implementation ViewController
@@ -19,10 +21,23 @@
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
-    _imageView = [[UIImageView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-150)/2, (self.view.frame.size.height-150)/2, 150, 150)];
+    
+    _mView = [[NewView alloc]initWithFrame:CGRectMake(0,0,250,250)];
+    _mView.userInteractionEnabled = YES;//交互使能，允许界面交互，不设置就不能动
+    _mView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:_mView];
+    
+    _imageView2 = [[NewImageView2 alloc]initWithFrame:CGRectMake(0, 0, 150, 150)];
+    _imageView2.userInteractionEnabled = YES;//交互使能，允许界面交互，不设置就不能动
+    _imageView2.image = [UIImage imageNamed:@"cat"];
+    [self.mView addSubview:_imageView2];
+    
+    _imageView = [[NewImageView alloc]initWithFrame:CGRectMake((self.view.frame.size.width-150)/2, (self.view.frame.size.height-150)/2, 150, 150)];
     _imageView.userInteractionEnabled = YES;//交互使能，允许界面交互，不设置就不能动
     _imageView.image = [UIImage imageNamed:@"cat"];
     [self.view addSubview:_imageView];
+    
+
     
     // 单击的 TapRecognizer
     UITapGestureRecognizer *singleTap;
@@ -72,7 +87,8 @@
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc]
                                              initWithTarget:self
                                              action:@selector(handlePan:)];
-    [_imageView addGestureRecognizer:panRecognizer];//关键语句，添加一个手势监测；
+//    [_imageView addGestureRecognizer:panRecognizer];//关键语句，添加一个手势监测；
+    panRecognizer.cancelsTouchesInView = YES;
     panRecognizer.maximumNumberOfTouches = 1;
 //    panRecognizer.delegate = self;
     
@@ -86,6 +102,7 @@
     
 }
 
+# pragma 手势
 -(void)SingleTap:(UITapGestureRecognizer*)recognizer
 {
     //处理单击操作
@@ -149,10 +166,36 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+# pragma 触摸
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    NSLog(@"touch began...");
 }
+
+
+- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    // 想让控件随着手指移动而移动,监听手指移动
+    // 获取UITouch对象
+    UITouch *touch = [touches anyObject];
+    // 获取当前点的位置
+    CGPoint curP = [touch locationInView:self.imageView];
+    // 获取上一个点的位置
+    CGPoint preP = [touch previousLocationInView:self.imageView];
+    // 获取它们x轴的偏移量,每次都是相对上一次
+    CGFloat offsetX = curP.x - preP.x;
+    // 获取y轴的偏移量
+    CGFloat offsetY = curP.y - preP.y;
+    // 修改控件的形变或者frame,center,就可以控制控件的位置
+    // 形变也是相对上一次形变(平移)
+    // CGAffineTransformMakeTranslation:会把之前形变给清空,重新开始设置形变参数
+    // make:相对于最原始的位置形变
+    // CGAffineTransform t:相对这个t的形变的基础上再去形变
+    // 如果相对哪个形变再次形变,就传入它的形变
+    self.imageView.transform = CGAffineTransformTranslate(self.imageView.transform, offsetX, offsetY);
+    NSLog(@"touch 操作");
+}
+
+
+
 
 //- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer{
 //    return YES;

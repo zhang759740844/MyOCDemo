@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		B64ABDDB1D7D6B0700C3956C /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B64ABDDA1D7D6B0700C3956C /* Images-2.xcassets */; };
+		B64ABDDE1D7E5ADA00C3956C /* NewImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B64ABDDD1D7E5ADA00C3956C /* NewImageView.m */; };
+		B64ABDE41D7E865300C3956C /* NewImageView2.m in Sources */ = {isa = PBXBuildFile; fileRef = B64ABDE31D7E865300C3956C /* NewImageView2.m */; };
+		B64ABDE71D7E88AD00C3956C /* NewView.m in Sources */ = {isa = PBXBuildFile; fileRef = B64ABDE61D7E88AD00C3956C /* NewView.m */; };
 		C539DE381A859E21006B7AF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C539DE371A859E21006B7AF2 /* Foundation.framework */; };
 		C539DE3A1A859E21006B7AF2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C539DE391A859E21006B7AF2 /* CoreGraphics.framework */; };
 		C539DE3C1A859E21006B7AF2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C539DE3B1A859E21006B7AF2 /* UIKit.framework */; };
@@ -35,6 +38,12 @@
 
 /* Begin PBXFileReference section */
 		B64ABDDA1D7D6B0700C3956C /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
+		B64ABDDC1D7E5ADA00C3956C /* NewImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewImageView.h; sourceTree = "<group>"; };
+		B64ABDDD1D7E5ADA00C3956C /* NewImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewImageView.m; sourceTree = "<group>"; };
+		B64ABDE21D7E865300C3956C /* NewImageView2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewImageView2.h; sourceTree = "<group>"; };
+		B64ABDE31D7E865300C3956C /* NewImageView2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewImageView2.m; sourceTree = "<group>"; };
+		B64ABDE51D7E88AD00C3956C /* NewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewView.h; sourceTree = "<group>"; };
+		B64ABDE61D7E88AD00C3956C /* NewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewView.m; sourceTree = "<group>"; };
 		C539DE341A859E21006B7AF2 /* UIGestureRecognizer手势的创建和使用方法.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UIGestureRecognizer手势的创建和使用方法.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C539DE371A859E21006B7AF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C539DE391A859E21006B7AF2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -82,6 +91,12 @@
 		C539DE2B1A859E21006B7AF2 = {
 			isa = PBXGroup;
 			children = (
+				B64ABDDC1D7E5ADA00C3956C /* NewImageView.h */,
+				B64ABDDD1D7E5ADA00C3956C /* NewImageView.m */,
+				B64ABDE21D7E865300C3956C /* NewImageView2.h */,
+				B64ABDE31D7E865300C3956C /* NewImageView2.m */,
+				B64ABDE51D7E88AD00C3956C /* NewView.h */,
+				B64ABDE61D7E88AD00C3956C /* NewView.m */,
 				C5AABA601A859F6600D8735B /* ViewController.h */,
 				C5AABA611A859F6600D8735B /* ViewController.m */,
 				C539DE3D1A859E21006B7AF2 /* UIGestureRecognizer手势的创建和使用方法 */,
@@ -252,7 +267,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5AABA621A859F6600D8735B /* ViewController.m in Sources */,
+				B64ABDE71D7E88AD00C3956C /* NewView.m in Sources */,
+				B64ABDDE1D7E5ADA00C3956C /* NewImageView.m in Sources */,
 				C539DE481A859E21006B7AF2 /* AppDelegate.m in Sources */,
+				B64ABDE41D7E865300C3956C /* NewImageView2.m in Sources */,
 				C539DE441A859E21006B7AF2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
