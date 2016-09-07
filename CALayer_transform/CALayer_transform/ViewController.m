@@ -7,6 +7,18 @@
 //
 
 #import "ViewController.h"
+#define angle2Radian(angle)  ((angle)/180.0*M_PI)
+
+typedef NS_ENUM(NSInteger, AnimationType) {
+    //以下是枚举成员
+    BaseAnimation = 1,
+    KeyFrameAnimation_Value = 1<<1,
+    KeyFrameAnimation_Path = 1<<2,
+    KeyFrameAnimation_shake = 1<<3,
+    Transition = 1<<4,
+    AnimationGroup = 1<<5,
+    ViewAnimation = 1<<6
+};
 
 @interface ViewController ()
 @property (nonatomic, weak) IBOutlet UIView *leftArm;
@@ -22,20 +34,20 @@
 @property (weak, nonatomic) IBOutlet UIView *customView;
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 
-
 @property (nonatomic, assign) CGFloat offsetLX;
 
 @property (nonatomic, assign) CGFloat offsetLY;
 
+// 动画相关参数
+@property(nonatomic,strong)CALayer *myLayer;
+@property(nonatomic,assign)AnimationType animationType;
+@property(nonatomic,assign) int index;
+
+
+
 @end
 
 @implementation ViewController
-
-
-- (void)awakeFromNib{
-
-    
-}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -49,9 +61,44 @@
     [self customLayer];
     //CALayer的transform属性
     [self setTransform];
-
+    
+    //Animation 相关的初始化
+    _animationType = BaseAnimation|KeyFrameAnimation_shake|ViewAnimation;
+    [self initAnimationWithType:_animationType];
 }
 
+#pragma mark - Animation初始化
+- (void)initAnimationWithType:(NSInteger)type{
+    _animationType = type;
+    for (NSInteger animationType = 1; animationType<(ViewAnimation<<1); animationType = animationType<<1) {
+        if (type & animationType) {
+            [self startAnimationInitialWithType:animationType];
+        }
+    }
+}
+
+- (void)startAnimationInitialWithType:(NSInteger)type{
+    
+    switch (type) {
+        case BaseAnimation:{
+            CALayer *myLayer=[CALayer layer];
+            myLayer.bounds=CGRectMake(0, 0, 50, 80);
+            myLayer.backgroundColor=[UIColor yellowColor].CGColor;
+            myLayer.position=CGPointMake(50, 50);
+            myLayer.anchorPoint=CGPointMake(0, 0);
+            myLayer.cornerRadius=20;
+            //添加layer
+            [self.view.layer addSublayer:myLayer];
+            self.myLayer=myLayer;
+        }
+            break;
+        case Transition:
+            _index = 1;
+            break;
+        default:
+            break;
+    }
+}
 #pragma mark - CALayer简单使用
 - (void)simplyUseCALayer{
     //设置边框的宽度为20
@@ -80,15 +127,6 @@
     self.iconView.layer.cornerRadius=20;
     //设置超过子图层的部分裁减掉
     self.iconView.layer.masksToBounds=YES;
-}
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    //通过uiview设置（2D效果）
-    //    self.iconView.transform=CGAffineTransformMakeTranslation(0, -100);
-    //通过layer来设置（3D效果,x，y，z三个方向）
-    //    self.iconView.layer.transform=CATransform3DMakeTranslation(100, 20, 0);
-    CATransform3D t3d = CATransform3DMakeTranslation(100, 20, 0);
-    self.iconView.layer.transform = CATransform3DRotate(t3d, M_PI_4, 1, 1, 0.5);
 }
 
 # pragma mark - 创建 图层
@@ -166,8 +204,7 @@
 }
 
 //代理
--(void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx
-{
+-(void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx{
     //1.绘制图形
     //画一个圆
     CGContextAddEllipseInRect(ctx, CGRectMake(50, 50, 100, 100));
@@ -192,11 +229,60 @@
 - (void)buttonPressed{
     _button.selected = !_button.selected;
     [self startAnim:_button.selected];
+    
+    //Transition动画需要的点击事件
+    if (_animationType&Transition) {
+        self.index--;
+        if (self.index<1) {
+            self.index=7;
+        }
+        self.iconView.image=[UIImage imageNamed: [NSString stringWithFormat:@"%d.jpg",self.index]];
+        
+        //创建核心动画
+        CATransition *ca=[CATransition animation];
+        //告诉要执行什么动画
+        //设置过度效果
+        ca.type=@"cube";
+        //设置动画的过度方向（向左）
+        ca.subtype=kCATransitionFromLeft;
+        //设置动画的时间
+        ca.duration=2.0;
+        //添加动画
+        [self.iconView.layer addAnimation:ca forKey:nil];
+    }
 }
 
 - (void)button2Pressed{
     _button2.selected = !_button2.selected;
     [self startAnim2:_button2.selected];
+    
+    //Transition动画需要的点击事件
+    if (_animationType&Transition) {
+        self.index++;
+        if (self.index>7) {
+            self.index=1;
+        }
+        self.iconView.image=[UIImage imageNamed: [NSString stringWithFormat:@"%d.jpg",self.index]];
+        
+        //1.创建核心动画
+        CATransition *ca=[CATransition animation];
+        
+        //1.1告诉要执行什么动画
+        //1.2设置过度效果
+        ca.type=@"cube";
+        //1.3设置动画的过度方向（向右）
+        ca.subtype=kCATransitionFromRight;
+        //1.4设置动画的时间
+        ca.duration=2.0;
+        //1.5设置动画的起点
+        ca.startProgress=0.5;
+        //1.6设置动画的终点
+        //    ca.endProgress=0.5;
+        
+        //2.添加动画
+        [self.iconView.layer addAnimation:ca forKey:nil];
+        
+    }
 }
 
 - (void)startAnim2:(BOOL)isSelected{
@@ -255,6 +341,189 @@
         NSLog(@"size:   %f,%f",_leftArm.frame.size.height,_leftArm.frame.size.width);
     }
     
+}
+
+# pragma mark - 触摸操作
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    //图层动画触摸事件
+    [self layerAnimation];
+    //核心动画触摸事件
+    [self coreAnimationWithType:_animationType];
+}
+
+- (void)layerAnimation{
+    //通过uiview设置（2D效果）
+    //    self.iconView.transform=CGAffineTransformMakeTranslation(0, -100);
+    //通过layer来设置（3D效果,x，y，z三个方向）
+    //    self.iconView.layer.transform=CATransform3DMakeTranslation(100, 20, 0);
+    CATransform3D t3d = CATransform3DMakeTranslation(100, 20, 0);
+    self.iconView.layer.transform = CATransform3DRotate(t3d, M_PI_4, 1, 1, 0.5);
+}
+
+- (void)coreAnimationWithType:(NSInteger)type{
+    for (NSInteger animationType = 1; animationType<(ViewAnimation<<1); animationType = animationType<<1) {
+        if (type & animationType) {
+            [self startCoreAnimationWithType:animationType];
+        }
+    }
+}
+
+- (void)startCoreAnimationWithType:(NSInteger)type{
+    switch (type) {
+        case BaseAnimation:{
+            //1.创建核心动画
+            //    CABasicAnimation *anima=[CABasicAnimation animationWithKeyPath:<#(NSString *)#>]
+            CABasicAnimation *anima=[CABasicAnimation animation];
+            
+            //1.1告诉系统要执行什么样的动画
+            anima.keyPath=@"position";
+            //设置通过动画，将layer从哪儿移动到哪儿
+            anima.fromValue=[NSValue valueWithCGPoint:CGPointMake(0, 0)];
+            anima.toValue=[NSValue valueWithCGPoint:CGPointMake(200, 300)];
+            
+            //1.2设置动画执行完毕之后不删除动画
+            anima.removedOnCompletion=NO;
+            //1.3设置保存动画的最新状态
+            anima.fillMode=kCAFillModeForwards;
+            //2.添加核心动画到layer
+            [self.myLayer addAnimation:anima forKey:nil];
+        }
+            break;
+        case KeyFrameAnimation_Value:{
+            //1.创建核心动画
+            CAKeyframeAnimation *keyAnima=[CAKeyframeAnimation animation];
+            //平移
+            keyAnima.keyPath=@"position";
+            //1.1告诉系统要执行什么动画
+            NSValue *value1=[NSValue valueWithCGPoint:CGPointMake(100, 100)];
+            NSValue *value2=[NSValue valueWithCGPoint:CGPointMake(200, 100)];
+            NSValue *value3=[NSValue valueWithCGPoint:CGPointMake(200, 200)];
+            NSValue *value4=[NSValue valueWithCGPoint:CGPointMake(100, 200)];
+            NSValue *value5=[NSValue valueWithCGPoint:CGPointMake(100, 100)];
+            keyAnima.values=@[value1,value2,value3,value4,value5];
+            //1.2设置动画执行完毕后，不删除动画
+            keyAnima.removedOnCompletion=NO;
+            //1.3设置保存动画的最新状态
+            keyAnima.fillMode=kCAFillModeForwards;
+            //1.4设置动画执行的时间
+            keyAnima.duration=4.0;
+            //1.5设置动画的节奏
+            keyAnima.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+            
+            //设置代理，开始—结束
+            keyAnima.delegate=self;
+            //2.添加核心动画
+            [self.customView.layer addAnimation:keyAnima forKey:nil];
+        }
+            break;
+        case KeyFrameAnimation_Path:{
+            //1.创建核心动画
+            CAKeyframeAnimation *keyAnima=[CAKeyframeAnimation animation];
+            //平移
+            keyAnima.keyPath=@"position";
+            //1.1告诉系统要执行什么动画
+            //创建一条路径
+            CGMutablePathRef path=CGPathCreateMutable();
+            //设置一个圆的路径
+            CGPathAddEllipseInRect(path, NULL, CGRectMake(150, 100, 100, 100));
+            keyAnima.path=path;
+            
+            //有create就一定要有release
+            CGPathRelease(path);
+            //1.2设置动画执行完毕后，不删除动画
+            keyAnima.removedOnCompletion=NO;
+            //1.3设置保存动画的最新状态
+            keyAnima.fillMode=kCAFillModeForwards;
+            //1.4设置动画执行的时间
+            keyAnima.duration=5.0;
+            //1.5设置动画的节奏
+            keyAnima.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+            
+            //设置代理，开始—结束
+            keyAnima.delegate=self;
+            //2.添加核心动画
+            [self.customView.layer addAnimation:keyAnima forKey:@"wendingding"];
+        }
+            break;
+        case KeyFrameAnimation_shake:{
+            //1.创建核心动画
+            CAKeyframeAnimation *keyAnima=[CAKeyframeAnimation animation];
+            keyAnima.keyPath=@"transform.rotation";
+            //设置动画时间
+            keyAnima.duration=0.1;
+            //设置图标抖动弧度
+            //把度数转换为弧度  度数/180*M_PI
+            keyAnima.values=@[@(-angle2Radian(4)),@(angle2Radian(4)),@(-angle2Radian(4))];
+            //设置动画的重复次数(设置为最大值)
+            keyAnima.repeatCount=MAXFLOAT;
+            
+            keyAnima.fillMode=kCAFillModeForwards;
+            keyAnima.removedOnCompletion=NO;
+            //2.添加动画
+            [self.iconView.layer addAnimation:keyAnima forKey:nil];
+        }
+            break;
+        case AnimationGroup:{
+            CABasicAnimation *a1 = [CABasicAnimation animation];
+            a1.keyPath = @"transform.translation.y";
+            a1.toValue = @(100);
+            // 缩放动画
+            CABasicAnimation *a2 = [CABasicAnimation animation];
+            a2.keyPath = @"transform.scale";
+            a2.toValue = @(0.0);
+            // 旋转动画
+            CABasicAnimation *a3 = [CABasicAnimation animation];
+            a3.keyPath = @"transform.rotation";
+            a3.toValue = @(M_PI_2);
+            // 组动画
+            CAAnimationGroup *groupAnima = [CAAnimationGroup animation];
+            
+            groupAnima.animations = @[a1, a2, a3];
+            
+            //设置组动画的时间
+            groupAnima.duration = 2;
+            groupAnima.fillMode = kCAFillModeForwards;
+            groupAnima.removedOnCompletion = NO;
+            
+            [self.iconView.layer addAnimation:groupAnima forKey:nil];
+        }
+            break;
+        case ViewAnimation:{
+            //打印动画块的位置
+            NSLog(@"动画执行之前的位置：%@",NSStringFromCGPoint(self.customView.center));
+            
+            //首尾式动画
+            [UIView beginAnimations:nil context:nil];
+            //执行动画
+            //设置动画执行时间
+            [UIView setAnimationDuration:2.0];
+            //设置代理
+            [UIView setAnimationDelegate:self];
+            //设置动画执行完毕调用的事件
+            [UIView setAnimationDidStopSelector:@selector(didStopAnimation)];
+            self.customView.center=CGPointMake(200, 300);
+            [UIView commitAnimations];
+        }
+        default:
+            break;
+    }
+
+}
+
+# pragma mark - 动画代理
+-(void)animationDidStart:(CAAnimation *)anim{
+    NSLog(@"开始执行动画");
+}
+-(void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    //动画执行完毕，打印执行完毕后的position值
+    NSString *str=NSStringFromCGPoint(self.myLayer.position);
+    NSLog(@"执行后：%@",str);
+}
+
+-(void)didStopAnimation{
+    NSLog(@"动画执行完毕");
+    //打印动画块的位置
+    NSLog(@"动画执行之后的位置：%@",NSStringFromCGPoint(self.customView.center));
 }
 
 @end
