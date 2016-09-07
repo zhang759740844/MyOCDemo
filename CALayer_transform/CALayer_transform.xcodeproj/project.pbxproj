@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B64ABDEA1D7EA4FB00C3956C /* NewLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B64ABDE91D7EA4FB00C3956C /* NewLayer.m */; };
-		B64ABDF61D7ED8A400C3956C /* AnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B64ABDF41D7ED8A400C3956C /* AnimationViewController.m */; };
-		B64ABDF71D7ED8A400C3956C /* AnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B64ABDF51D7ED8A400C3956C /* AnimationViewController.xib */; };
 		B6C41CF81D792ED4001188A9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C41CF71D792ED4001188A9 /* main.m */; };
 		B6C41CFB1D792ED4001188A9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C41CFA1D792ED4001188A9 /* AppDelegate.m */; };
 		B6C41CFE1D792ED4001188A9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C41CFD1D792ED4001188A9 /* ViewController.m */; };
@@ -39,9 +37,6 @@
 /* Begin PBXFileReference section */
 		B64ABDE81D7EA4FB00C3956C /* NewLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewLayer.h; sourceTree = "<group>"; };
 		B64ABDE91D7EA4FB00C3956C /* NewLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewLayer.m; sourceTree = "<group>"; };
-		B64ABDF31D7ED8A400C3956C /* AnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimationViewController.h; sourceTree = "<group>"; };
-		B64ABDF41D7ED8A400C3956C /* AnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AnimationViewController.m; sourceTree = "<group>"; };
-		B64ABDF51D7ED8A400C3956C /* AnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationViewController.xib; sourceTree = "<group>"; };
 		B6C41CF31D792ED4001188A9 /* CALayer_transform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CALayer_transform.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C41CF71D792ED4001188A9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B6C41CF91D792ED4001188A9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -107,9 +102,6 @@
 		B6C41CF51D792ED4001188A9 /* CALayer_transform */ = {
 			isa = PBXGroup;
 			children = (
-				B64ABDF31D7ED8A400C3956C /* AnimationViewController.h */,
-				B64ABDF41D7ED8A400C3956C /* AnimationViewController.m */,
-				B64ABDF51D7ED8A400C3956C /* AnimationViewController.xib */,
 				B6C41CFC1D792ED4001188A9 /* ViewController.h */,
 				B6C41CFD1D792ED4001188A9 /* ViewController.m */,
 				B6C41D291D7930D7001188A9 /* ViewController.xib */,
@@ -254,7 +246,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B64ABDF71D7ED8A400C3956C /* AnimationViewController.xib in Resources */,
 				B6C41D2A1D7930D7001188A9 /* ViewController.xib in Resources */,
 				B6C41D031D792ED4001188A9 /* Assets.xcassets in Resources */,
 			);
@@ -283,7 +274,6 @@
 			files = (
 				B64ABDEA1D7EA4FB00C3956C /* NewLayer.m in Sources */,
 				B6C41CFE1D792ED4001188A9 /* ViewController.m in Sources */,
-				B64ABDF61D7ED8A400C3956C /* AnimationViewController.m in Sources */,
 				B6C41CFB1D792ED4001188A9 /* AppDelegate.m in Sources */,
 				B6C41CF81D792ED4001188A9 /* main.m in Sources */,
 			);

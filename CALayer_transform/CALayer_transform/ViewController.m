@@ -22,8 +22,6 @@
 @property (weak, nonatomic) IBOutlet UIView *customView;
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 
-@property (weak, nonatomic) IBOutlet UIButton *next;
-
 
 @property (nonatomic, assign) CGFloat offsetLX;
 
@@ -52,11 +50,6 @@
     //CALayer的transform属性
     [self setTransform];
 
-}
-
-- (IBAction)nextController:(id)sender{
-    ViewController *vc = [ViewController alloc]init;
-    
 }
 
 #pragma mark - CALayer简单使用
