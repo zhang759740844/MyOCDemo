@@ -153,6 +153,10 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7jF-jf-4Lg">
+                                <rect key="frame" x="277" y="408" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -163,6 +167,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button" destination="7jF-jf-4Lg" id="YAn-66-n8F"/>
                         <outlet property="instanceNumberLabel" destination="muk-Qy-p0z" id="7n1-OT-gry"/>
                         <outlet property="titleLabel" destination="DyF-W5-GYT" id="bKi-8x-TxE"/>
                     </connections>

@@ -127,6 +127,7 @@
     label.frame = CGRectMake(label.frame.origin.x, label.frame.origin.y, size.width, size.height);
 }
 
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
 
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView

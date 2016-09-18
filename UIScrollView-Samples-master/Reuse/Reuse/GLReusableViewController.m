@@ -11,6 +11,7 @@
 @interface GLReusableViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *instanceNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *button;
 @end
 
 @implementation GLReusableViewController
@@ -32,12 +33,17 @@
 {
     [super viewDidLoad];
     [self reloadData];
+    [self.button addTarget:self action:@selector(pressed) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)reloadData
 {
     self.titleLabel.text = [NSString stringWithFormat:@"Page #%@", self.page];
     self.instanceNumberLabel.text = [NSString stringWithFormat:@"Instance #%ld", self.numberOfInstance];
+}
+
+- (void)pressed{
+    NSLog(@"buttonpressed");
 }
 
 @end

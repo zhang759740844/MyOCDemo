@@ -125,6 +125,9 @@
     //遍历vcsToEnqueue,将其中的vc移除，并且enqueue重用，将view添加到reusableVIewControllers数组中。
     for (GLReusableViewController *vc in vcsToEnqueue) {
         [vc.view removeFromSuperview];
+//        [self showChildViewControllers];
+//        [vc removeFromParentViewController];
+//        [self showChildViewControllers];
         [self.visibleViewControllers removeObject:vc];
         [self enqueueReusableViewController:vc];
     }
@@ -132,6 +135,13 @@
     for (NSNumber *page in pagesToLoad) {
         [self addViewControllerForPage:[page integerValue]];
     }
+}
+
+- (void)showChildViewControllers{
+    for (UIViewController *vc in self.childViewControllers){
+        NSLog(@"%@",vc.class);
+    }
+    NSLog(@"-----------");
 }
 
 - (void)enqueueReusableViewController:(GLReusableViewController *)viewController
@@ -150,9 +160,11 @@
         vc.numberOfInstance = numberOfInstance;
         numberOfInstance++;
         //在viewController中添加controller
-        [vc willMoveToParentViewController:self];
+        //willMove和didMove其实什么也没做，不调用也可以。
+        //这个例子中使用addChildViewConroller与否没有任何区别，这个方法只是对childview的一个注册，当需要用的时候可以通过self.childViews
+//        [vc willMoveToParentViewController:self];
         [self addChildViewController:vc];
-        [vc didMoveToParentViewController:self];
+//        [vc didMoveToParentViewController:self];
     }
     return vc;
 }
@@ -186,10 +198,10 @@
         page = MAX(page, 0);
         page = MIN(page, TOTAL_PAGES - 1);
         [self loadPage:page];
-        NSLog(@"content");
+//        NSLog(@"content");
     }
     else{
-        NSLog(@"navigation");
+//        NSLog(@"navigation");
     }
 }
 
