@@ -1,0 +1,14 @@
+target 'DynamicWithStatic' do
+pod 'SVProgressHUD'
+end
+
+target 'StaticWithStatic' do
+pod 'SVProgressHUD'
+end
+
+target 'FrameworksTest' do
+    pod 'SVProgressHUD'
+end
+
+target 'DynamicWithDynamic' do
+end
