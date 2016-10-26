@@ -7,12 +7,12 @@
 //
 
 #import "SVProgress.h"
-#import "SVProgressHUD.h"
+//#import "SVProgressHUD.h"
 
 @implementation SVProgress
-+(SVProgresshud)getBlock{
-    return ^(){
-        [SVProgressHUD showSuccessWithStatus:@"成功！"];
-    };
-}
+//+(SVProgresshud)getBlock{
+//    return ^(){
+//        [SVProgressHUD showSuccessWithStatus:@"成功！"];
+//    };
+//}
 @end

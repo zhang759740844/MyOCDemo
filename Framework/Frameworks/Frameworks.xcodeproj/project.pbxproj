@@ -29,12 +29,10 @@
 		B6E87AD11DBDD0C100B7BE95 /* SVProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = B6E87ACF1DBDD0C100B7BE95 /* SVProgress.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B6E87B091DBDDAC800B7BE95 /* Frameworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6045E4C1DB9F83F00E9A1E2 /* Frameworks.framework */; };
 		B6E87B2E1DBE1B5500B7BE95 /* StaticWithDynamic.h in Headers */ = {isa = PBXBuildFile; fileRef = B6E87B2D1DBE1B5500B7BE95 /* StaticWithDynamic.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B6E87B321DBE1B5500B7BE95 /* StaticWithDynamic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E87B2B1DBE1B5500B7BE95 /* StaticWithDynamic.framework */; };
-		B6E87B331DBE1B5500B7BE95 /* StaticWithDynamic.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B6E87B2B1DBE1B5500B7BE95 /* StaticWithDynamic.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B6E87B3A1DBE1BA700B7BE95 /* SVProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = B6E87B381DBE1BA700B7BE95 /* SVProgress.m */; };
 		B6E87B3B1DBE1BA700B7BE95 /* SVProgress.h in Headers */ = {isa = PBXBuildFile; fileRef = B6E87B391DBE1BA700B7BE95 /* SVProgress.h */; };
 		B6E87B3F1DBE1C6900B7BE95 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6045EE41DBDAF0800E9A1E2 /* SVProgressHUD.framework */; };
-		B6E87B401DBE1C7700B7BE95 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6045EE41DBDAF0800E9A1E2 /* SVProgressHUD.framework */; };
+		B6E87B531DBF514D00B7BE95 /* Frameworks.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B6E87B491DBF2FCB00B7BE95 /* Frameworks.bundle */; };
 		E97BE35239D66F1508ED3729 /* libPods-DynamicWithStatic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BBDB9603387638AC7AACF83 /* libPods-DynamicWithStatic.a */; };
 		EB7137C49709B108577A9128 /* libPods-DynamicWithDynamic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B263B5ECD786C8E80DCD70CA /* libPods-DynamicWithDynamic.a */; };
 /* End PBXBuildFile section */
@@ -63,7 +61,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B6E87B331DBE1B5500B7BE95 /* StaticWithDynamic.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,7 +113,7 @@
 		B6E87B2F1DBE1B5500B7BE95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6E87B381DBE1BA700B7BE95 /* SVProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgress.m; sourceTree = "<group>"; };
 		B6E87B391DBE1BA700B7BE95 /* SVProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgress.h; sourceTree = "<group>"; };
-		B6E87B3C1DBE1C1400B7BE95 /* SVProgressHUD */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = SVProgressHUD; path = SVProgressHUD.framework/SVProgressHUD; sourceTree = SOURCE_ROOT; };
+		B6E87B491DBF2FCB00B7BE95 /* Frameworks.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Frameworks.bundle; path = Frameworks/Frameworks.bundle; sourceTree = "<group>"; };
 		EA21366A851CBCAB1F62AAE2 /* Pods-DynamicWithDynamic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicWithDynamic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DynamicWithDynamic/Pods-DynamicWithDynamic.debug.xcconfig"; sourceTree = "<group>"; };
 		EB5DEDFD0D452842F7CA8E5F /* libPods-FrameworkTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FrameworkTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDCC976553F10F7B8843B8E8 /* Pods-DynamicWithDynamic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DynamicWithDynamic.release.xcconfig"; path = "Pods/Target Support Files/Pods-DynamicWithDynamic/Pods-DynamicWithDynamic.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,7 +149,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E87B321DBE1B5500B7BE95 /* StaticWithDynamic.framework in Frameworks */,
 				B6E87B091DBDDAC800B7BE95 /* Frameworks.framework in Frameworks */,
 				41A69D6BF2E7423DAE53F50A /* libPods-FrameworksTest.a in Frameworks */,
 			);
@@ -170,7 +166,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6E87B401DBE1C7700B7BE95 /* SVProgressHUD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,6 +190,7 @@
 		B6045E421DB9F83F00E9A1E2 = {
 			isa = PBXGroup;
 			children = (
+				B6E87B491DBF2FCB00B7BE95 /* Frameworks.bundle */,
 				B6045EE41DBDAF0800E9A1E2 /* SVProgressHUD.framework */,
 				B6045EC41DBA230700E9A1E2 /* DynamicWithStatic */,
 				B6045ED91DBDAEEF00E9A1E2 /* DynamicWithDynamic */,
@@ -223,7 +219,6 @@
 		B6045E4E1DB9F83F00E9A1E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B6E87B3C1DBE1C1400B7BE95 /* SVProgressHUD */,
 				B6045E571DBA03AF00E9A1E2 /* PrintString.m */,
 				B6045E581DBA03AF00E9A1E2 /* PrintString.h */,
 				B6045E4F1DB9F83F00E9A1E2 /* Frameworks.h */,
@@ -553,6 +548,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6E87B531DBF514D00B7BE95 /* Frameworks.bundle in Resources */,
 				B6E87AA81DBDC43F00B7BE95 /* LaunchScreen.storyboard in Resources */,
 				B6E87AA51DBDC43F00B7BE95 /* Assets.xcassets in Resources */,
 				B6E87AA31DBDC43F00B7BE95 /* Main.storyboard in Resources */,
@@ -983,6 +979,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SVProgressHUD.framework",
 				);
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = zachary.DynamicWithDynamic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1009,6 +1006,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/SVProgressHUD.framework",
 				);
+				MACH_O_TYPE = mh_dylib;
 				PRODUCT_BUNDLE_IDENTIFIER = zachary.DynamicWithDynamic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1194,6 +1192,7 @@
 				B6E87B361DBE1B5500B7BE95 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,7 +12,7 @@
 //#import "DynamicWithDynamic/SVProgress.h"
 //#import "StaticWithStatic.h"
 @interface ViewController ()
-
+@property (nonatomic,strong) IBOutlet UIImageView *imgView;
 @end
 
 @implementation ViewController
@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [PrintString printString];
+    UIImage *image = [PrintString getImage];
+    [_imgView setImage:image];
 //    [SVProgress getBlock]();
 }
 
