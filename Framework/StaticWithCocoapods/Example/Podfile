@@ -1,0 +1,3 @@
+target 'StaticWithCocoapods_Example' do
+  pod 'StaticWithCocoapods', :path => ‘../‘
+end

@@ -1,0 +1,40 @@
+{
+  "name": "StaticWithCocoapods",
+  "version": "0.1.0",
+  "summary": "A short description of StaticWithCocoapods.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/StaticWithCocoapods",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Zachary": "759740844@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/StaticWithCocoapods.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "StaticWithCocoapods/Classes/**/*",
+  "resource_bundles": {
+    "StaticWithCocoapods": [
+      "StaticWithCocoapods/Assets/*.png"
+    ]
+  },
+  "public_header_files": "Pod/Classes/**/*.h",
+  "frameworks": [
+    "UIKit",
+    "MapKit"
+  ],
+  "dependencies": {
+    "AFNetworking": [
+      "~> 2.3"
+    ],
+    "SVProgressHUD": [
+
+    ]
+  }
+}
