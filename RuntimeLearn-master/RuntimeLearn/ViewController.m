@@ -82,8 +82,8 @@
     TestModel *model = [TestModel objectWithKeyValues:dictionary];
     
     NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject;
-    path = [path stringByAppendingPathComponent:@"test"];
-    [NSKeyedArchiver archiveRootObject:model toFile:path];
+    path = [path stringByAppendingPathComponent:@"test.plist"];
+    BOOL a = [NSKeyedArchiver archiveRootObject:model toFile:path];
     
     TestModel *m = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
     NSLog(@"m.name is %@",m.name);
