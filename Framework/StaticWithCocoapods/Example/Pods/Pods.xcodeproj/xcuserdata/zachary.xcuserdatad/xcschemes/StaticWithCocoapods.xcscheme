@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '97632A652C8AC8B6A0EE9A44CD513B01'
+               BlueprintIdentifier = '01DF6336C860093B790235AE23534EE5'
                BlueprintName = 'StaticWithCocoapods'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libStaticWithCocoapods.a'>
+               BuildableName = 'StaticWithCocoapods.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

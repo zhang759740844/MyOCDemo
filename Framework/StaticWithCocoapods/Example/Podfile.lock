@@ -20,7 +20,7 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - StaticWithCocoapods (0.1.0):
+  - StaticWithCocoapods (0.2.0):
     - AFNetworking (~> 2.3)
     - SVProgressHUD
   - SVProgressHUD (2.0.3)
@@ -30,13 +30,13 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   StaticWithCocoapods:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
-  StaticWithCocoapods: 7b2135e6c01f4a9d3d39aa38147b8a95d521a071
+  StaticWithCocoapods: 67e337156fc8492358a1c739f41d95861e76116a
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 6769fc31e79d22ec2b1c6a1c68435e4615045626
+PODFILE CHECKSUM: 55a2e9841c35c16d353c40d7a08171d96969f97c
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.1

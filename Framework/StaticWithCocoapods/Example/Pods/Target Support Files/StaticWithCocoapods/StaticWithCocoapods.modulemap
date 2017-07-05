@@ -1,0 +1,6 @@
+framework module StaticWithCocoapods {
+  umbrella header "StaticWithCocoapods-umbrella.h"
+
+  export *
+  module * { export * }
+}

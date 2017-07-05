@@ -10,10 +10,9 @@
 #endif
 #endif
 
-#ifndef TARGET_OS_IOS
-  #define TARGET_OS_IOS TARGET_OS_IPHONE
-#endif
+#import "PrintString.h"
+#import "SVProgress.h"
 
-#ifndef TARGET_OS_WATCH
-  #define TARGET_OS_WATCH 0
-#endif
+FOUNDATION_EXPORT double StaticWithCocoapodsVersionNumber;
+FOUNDATION_EXPORT const unsigned char StaticWithCocoapodsVersionString[];
+

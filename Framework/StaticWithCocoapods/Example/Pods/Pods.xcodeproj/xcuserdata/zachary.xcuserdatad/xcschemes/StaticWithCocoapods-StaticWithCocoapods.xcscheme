@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'E15487D4A4447CBA74188AD828405530'
+               BlueprintIdentifier = 'C9A5E39974564228E667A938C586AFB2'
                BlueprintName = 'StaticWithCocoapods-StaticWithCocoapods'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'StaticWithCocoapods.bundle'>

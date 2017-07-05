@@ -20,7 +20,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		63F4212B1C8092E74260F38D /* libPods-StaticWithCocoapods_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B9E8EEBE6E791999E2567B39 /* libPods-StaticWithCocoapods_Example.a */; };
+		8092425B611B7C231B43374D /* Pods_StaticWithCocoapods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6BC01899DFFD1FE33918A17 /* Pods_StaticWithCocoapods_Example.framework */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		B67D98671DC050F100E78EC7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B67D98661DC050F100E78EC7 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
@@ -61,9 +61,9 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B0E04AF4ACC2C024AB96EA8D /* StaticWithCocoapods.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = StaticWithCocoapods.podspec; path = ../StaticWithCocoapods.podspec; sourceTree = "<group>"; };
 		B67D98661DC050F100E78EC7 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "../Launch Screen.storyboard"; sourceTree = "<group>"; };
-		B9E8EEBE6E791999E2567B39 /* libPods-StaticWithCocoapods_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StaticWithCocoapods_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4FAA08EA4195AE14FF1663 /* Pods-StaticWithCocoapods_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StaticWithCocoapods_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StaticWithCocoapods_Example/Pods-StaticWithCocoapods_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C9BEEB0927F1FEF87AC0D8B9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D6BC01899DFFD1FE33918A17 /* Pods_StaticWithCocoapods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StaticWithCocoapods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				63F4212B1C8092E74260F38D /* libPods-StaticWithCocoapods_Example.a in Frameworks */,
+				8092425B611B7C231B43374D /* Pods_StaticWithCocoapods_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +120,7 @@
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
 				3568BE5C8A562A3000B90585 /* Pods_StaticWithCocoapods_Tests.framework */,
-				B9E8EEBE6E791999E2567B39 /* libPods-StaticWithCocoapods_Example.a */,
+				D6BC01899DFFD1FE33918A17 /* Pods_StaticWithCocoapods_Example.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -217,12 +217,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6003F5C2195388D20070C39A /* Build configuration list for PBXNativeTarget "StaticWithCocoapods_Tests" */;
 			buildPhases = (
-				56DDA69D4295D91EFFD638DF /* [CP] Check Pods Manifest.lock */,
 				6003F5AA195388D20070C39A /* Sources */,
 				6003F5AB195388D20070C39A /* Frameworks */,
 				6003F5AC195388D20070C39A /* Resources */,
-				E509BA917670B6F9778F1889 /* [CP] Embed Pods Frameworks */,
-				E1A65B3B416417A65FD63739 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -244,6 +241,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Zachary;
 				TargetAttributes = {
+					6003F589195388D20070C39A = {
+						DevelopmentTeam = XX9M4Q6PP9;
+					};
 					6003F5AD195388D20070C39A = {
 						TestTargetID = 6003F589195388D20070C39A;
 					};
@@ -303,22 +303,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		56DDA69D4295D91EFFD638DF /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		662749975AACF766BA617F42 /* [CP] Copy Pods Resources */ = {
@@ -349,36 +334,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StaticWithCocoapods_Example/Pods-StaticWithCocoapods_Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E1A65B3B416417A65FD63739 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StaticWithCocoapods_Tests/Pods-StaticWithCocoapods_Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E509BA917670B6F9778F1889 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StaticWithCocoapods_Tests/Pods-StaticWithCocoapods_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -510,6 +465,7 @@
 			baseConfigurationReference = BF4FAA08EA4195AE14FF1663 /* Pods-StaticWithCocoapods_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XX9M4Q6PP9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StaticWithCocoapods/StaticWithCocoapods-Prefix.pch";
 				INFOPLIST_FILE = "StaticWithCocoapods/StaticWithCocoapods-Info.plist";
@@ -525,6 +481,7 @@
 			baseConfigurationReference = 504A63C462E7587C2C990D40 /* Pods-StaticWithCocoapods_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XX9M4Q6PP9;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StaticWithCocoapods/StaticWithCocoapods-Prefix.pch";
 				INFOPLIST_FILE = "StaticWithCocoapods/StaticWithCocoapods-Info.plist";

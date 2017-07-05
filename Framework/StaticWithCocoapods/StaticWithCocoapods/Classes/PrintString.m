@@ -16,8 +16,11 @@
 
 
 + (UIImage *)getImage{
-//    [UIImage imageNamed:@"Frameworks.bundle/Image/author.png"]
-//    return [UIImage imageNamed:[[[NSBundle mainBundle] pathForResource:@"Frameworks" ofType:@"bundle"] stringByAppendingString:@"/Images/author.png"]];
-    return [UIImage imageNamed:[[[NSBundle mainBundle] pathForResource:@"StaticWithCocoapods" ofType:@"bundle"] stringByAppendingString:@"/author.png"]];
+    // .a
+//    return [UIImage imageNamed:[[[NSBundle mainBundle] pathForResource:@"StaticWithCocoapods" ofType:@"bundle"] stringByAppendingString:@"/author.png"]];
+    // .framework
+    NSBundle *bundle = [NSBundle bundleForClass:self.class];
+    UIImage *image = [UIImage imageNamed:[[[NSBundle bundleForClass:self.class] pathForResource:@"StaticWithCocoapods" ofType:@"bundle" ] stringByAppendingString:@"/author.png"]];
+    return image;
 }
 @end
