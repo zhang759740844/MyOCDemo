@@ -1,0 +1,27 @@
+{
+  "name": "OCWithSwift",
+  "version": "0.1.0",
+  "summary": "A short description of OCWithSwift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/zhang759740844/OCWithSwift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "zhang759740844": "759740844@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/zhang759740844/OCWithSwift.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "OCWithSwift/Classes/**/*",
+  "dependencies": {
+    "A_swift": [
+
+    ]
+  }
+}

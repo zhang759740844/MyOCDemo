@@ -1,0 +1,6 @@
+framework module OCWithSwift {
+  umbrella header "OCWithSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}

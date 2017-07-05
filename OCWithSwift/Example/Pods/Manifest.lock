@@ -1,0 +1,19 @@
+PODS:
+  - A_swift (2)
+  - OCWithSwift (0.1.0):
+    - A_swift
+
+DEPENDENCIES:
+  - OCWithSwift (from `../`)
+
+EXTERNAL SOURCES:
+  OCWithSwift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  A_swift: 38509f4132be33bb8d5039a402fb3d66c756002a
+  OCWithSwift: cd4cee4d84889e3b2ac38c6e655ada669eceef70
+
+PODFILE CHECKSUM: 2af99623545817c68d562ff2c905e9f1078c9e28
+
+COCOAPODS: 1.2.1

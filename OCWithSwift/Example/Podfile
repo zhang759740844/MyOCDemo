@@ -1,0 +1,8 @@
+use_frameworks!
+source 'https://github.com/ModulizationDemo/PrivatePods.git'
+source 'https://github.com/CocoaPods/Specs.git'
+target 'OCWithSwift_Example' do
+  pod 'OCWithSwift', :path => '../'
+    
+  
+end
